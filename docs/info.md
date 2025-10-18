@@ -10,10 +10,12 @@ You can also include images in this folder and reference them in the markdown. E
 ## How it works
 
 Right now it doesn't
+Adding another line
 
 ## How to test
 
 Just look at it
+Adding another line
 
 ## External hardware
 
