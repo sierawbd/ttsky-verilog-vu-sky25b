@@ -5,6 +5,7 @@
 
 `default_nettype none
 
+(* keep_hierarchy = 1 *)
 module tt_um_example (
     input  wire [7:0] ui_in,    // Dedicated inputs
     output wire [7:0] uo_out,   // Dedicated outputs
@@ -26,9 +27,9 @@ module tt_um_example (
     assign uio_oe  = 0;
 
     // synthesis keep
-    (* keep *) assign w0001 = ~ui_in[0];
+    assign w0001 = ~ui_in[0];
     //synthesis keep
-    (* keep *) assign uo_out[0] = ~w0001;
+    assign uo_out[0] = ~w0001;
     
     // List all unused inputs to prevent warnings
     wire _unused = &{ena, clk, rst_n, 1'b0, uio_in[7:0], ui_in[7:1]};
