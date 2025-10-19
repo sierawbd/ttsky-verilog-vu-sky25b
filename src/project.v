@@ -16,7 +16,9 @@ module tt_um_example (
     input  wire       rst_n    // reset_n - low to reset
 );
 
-    wire w0001;
+    // synthesis keep
+    (* keep = "true" *) wire w0001;
+   
     // All output pins must be assigned. If not used, assign to 0.
     assign uo_out[7:1] = 1;
     //assign uo_out[0] = ~ui_in[0];
