@@ -25,7 +25,9 @@ module tt_um_example (
     assign uio_out = 0;
     assign uio_oe  = 0;
 
+    // synthesis keep
     assign w0001 = ~ui_in[0];
+    //synthesis keep
     assign uo_out[0] = ~w0001;
     
     // List all unused inputs to prevent warnings
